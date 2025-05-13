@@ -12,7 +12,7 @@ class Board {
 public:
   	Board(const std::unique_ptr<Game>& Game, std::unique_ptr<Figure> Figure) :
 		playedGame(std::move(Game)) {};
-    void rozgerajGre(std::string Game);
+    void playGame(std::string Game);
 private:
   	const std::unique_ptr<Game>& playedGame;
     std::vector<std::vector<Field>> fields;

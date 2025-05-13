@@ -1,6 +1,6 @@
 #pragma once
 #include "Player.h"
-
+#include <memory>
 
 class Figure {
 public:
@@ -9,7 +9,7 @@ public:
       virtual void move() = 0;
 
 private:
-  	Player owner;
+  	std::unique_ptr<Player> owner;
     unsigned int position_x;
     unsigned int position_y;
     //ruch - ilosc kratek w danej wspolrzednej, po ktorych porusza sie figura
