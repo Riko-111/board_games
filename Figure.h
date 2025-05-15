@@ -4,7 +4,7 @@
 
 class Figure {
 public:
-      Figure();
+      Figure(int pos_x, int pos_y, std::unique_ptr<Player> owner, int movement_x, int movement_y);
       virtual ~Figure() = default;
       virtual void move() = 0;
 

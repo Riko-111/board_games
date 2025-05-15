@@ -1,22 +1,20 @@
 #pragma once
-#include <vector>
-#include <string>
 #include "Figure.h"
-#include "Game.h"
 #include "Field.h"
 #include <memory>
-#include <utility>
+#include <vector>
+#include <string>
 
 
 class Board {
 public:
-  	Board(const std::unique_ptr<Game>& Game, std::unique_ptr<Figure> Figure) :
-		playedGame(std::move(Game)) {};
+  	Board(int width, int height, std::vector<std::unique_ptr<Figure>> Figures);
     void playGame(std::string Game);
 private:
-  	const std::unique_ptr<Game>& playedGame;
-    std::vector<std::vector<Field>> fields;
-    std::vector<std::unique_ptr<Figure>> figures;
+	unsigned int width;
+	unsigned int height;
+	std::vector<std::unique_ptr<Figure>> figures;
+	std::vector<std::vector<Field>> fields;
 };
 
 

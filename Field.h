@@ -1,8 +1,8 @@
 #pragma once
-#include <vector>
 #include "Figure.h"
+#include <vector>
 #include <memory>
-#include <variant>
+
 
 class Field {
 public:
