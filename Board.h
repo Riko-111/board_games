@@ -8,8 +8,10 @@
 
 class Board {
 public:
+	Board(int width, int height);
   	Board(int width, int height, std::vector<std::unique_ptr<Figure>> Figures);
     void playGame(std::string Game);
+	void place(Figure placedFigure, Player placingPlayer);
 private:
 	unsigned int width;
 	unsigned int height;

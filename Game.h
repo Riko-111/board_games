@@ -11,7 +11,7 @@ public:
     virtual void startGame() = 0;
     // V maybe the same as destructor???
     virtual void endGame() = 0;
-    virtual void isWin() = 0;
+    virtual bool isWin() = 0;
     virtual void nexTurn() = 0;
 
 private:

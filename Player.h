@@ -3,6 +3,8 @@
 #include <vector>
 #include <memory>
 
+class Figure;
+
 class Player {
 public:
     explicit Player(std::vector<std::shared_ptr<Figure>> figures);
