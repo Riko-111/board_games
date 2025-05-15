@@ -1,6 +1,8 @@
 #pragma once
 #include <sys/types.h>
 #include <stdexcept>
+#include "Player.h"
+
 
 class Validator {
     template<typename T>
