@@ -2,6 +2,8 @@
 #include "Player.h"
 #include <memory>
 
+class Player;
+
 class Figure {
 public:
       Figure(int pos_x, int pos_y, std::unique_ptr<Player> owner, int movement_x, int movement_y);

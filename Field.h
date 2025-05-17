@@ -6,12 +6,17 @@
 
 class Field {
 public:
-    Field(unsigned int x, unsigned int y);
-    void effect();
+    Field(unsigned int x, unsigned int y, unsigned int figureLimit);
+    Field(const Field &other) = delete;
+    Field& operator=(const Field &other) = delete;
+    Field(Field &&other);
+    virtual void effect();
+    bool isOccupied();
+    void placeFigure(const std::unique_ptr<Figure> &figure);
+    void removeFigure(std::unique_ptr<Figure> figure);
+    virtual ~Field() = default;
 private:
     unsigned int x;
     unsigned int y;
-    std::vector<Figure> fieldFigures;
-    void placeFigure(std::unique_ptr<Figure> figure);
-    void removeFigure(std::unique_ptr<Figure> figure);
-};
+    unsigned int figureLimit;
+    std::vector<std::unique_ptr<Figure>> fieldFigures;};

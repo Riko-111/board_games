@@ -11,8 +11,8 @@ public:
     virtual void startGame() = 0;
     // V maybe the same as destructor???
     virtual void endGame() = 0;
-    virtual void isWin() = 0;
-    virtual void nexTurn() = 0;
+    virtual bool isWin() = 0;
+    virtual void nextTurn() = 0;
 
 private:
     std::vector<std::unique_ptr<Player>> players;
